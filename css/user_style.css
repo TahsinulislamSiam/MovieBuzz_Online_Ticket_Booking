@@ -207,7 +207,8 @@ input[type='submit']{
 
 .header .flex .search_form{
     position: absolute;
-    top: 100%;
+    top: 110%;
+    right: 0;
     width: 30rem;
     padding: 1rem;
     display: flex;
@@ -217,8 +218,11 @@ input[type='submit']{
     clip-path: polygon(0 0, 100% 0, 0 0);
     transition: .5s linear;
 }
+.header .flex .search_form.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
 
-.header .flex .search_button{
+.header .flex .search_form button{
     font-size: 2rem;
     color: var(--blue);
     cursor: pointer;
@@ -310,7 +314,123 @@ input[type='submit']{
 
 }
 
+.newsletter{
+    width: 100%;
+    background-image: url('../image/newsletter.jpg');
+    position: relative;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    background-image: -webkit-linear-gradient(0deg, #7400ba 0%, #0f5ae0 100%);
+}
 
+.newsletter .box-detail{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.7;
+}
+
+.newsletter .box-detail span{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.newsletter .box-detail h1{
+    text-transform: capitalize;
+}
+
+.newsletter .box-detail p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.newsletter .box-detail input{
+    width: 40rem;
+    padding: 1.2rem;
+    border: none;
+    background-color: #fff;
+}
+
+
+.newsletter .box-detail .icons i{
+    background-image: var(--background-image);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    transition: .5s;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+.newsletter button{
+    border:none ;
+}
+
+.client{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 4% 0;
+    margin: 0 auto;
+}
+
+.client .img-box{
+    text-align: center;
+    cursor: pointer;
+}
+
+
+@media (max-width:991px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .flex .navbar{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff3;
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 0 0);
+        transition: .5s ease;
+    }
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .flex .navbar a{
+        display: block;
+        margin: 1.5rem 0;
+        padding: 1rem;
+        background-color: center;
+        border-radius: .5rem;
+        color: #fff;
+    }
+    .header .flex .navbar a:hover{
+        background-image: var(--background-image);
+    }
+}
 
 
 

@@ -20,7 +20,14 @@
 <body>
     <?php include 'components/user_header.php'; ?>
 
+    <?php include 'components/user_footer.php'; ?>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script type="text/javascript">
+    <?php 
+        include'js/user_script.js';
+        ?>
+</script>
 
 
 <?php include 'components/alert.php'; ?>
