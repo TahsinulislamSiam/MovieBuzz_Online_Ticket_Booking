@@ -332,17 +332,24 @@ input[type='submit']{
     right:0;
     top: 0;
     bottom: 0;
-    background-image: -webkit-linear-gradient(0deg, #7400ba 0%, #0f5ae0 100%);
+    background: linear-gradient(
+        rgba(116,0,186,0.6),
+        rgba(15,90,224,0.6)
+    );
+    /* z-index: 1; */
 }
 
+
 .newsletter .box-detail{
+    font-weight: 600;
     width: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: 1.7;
+    text-align: center;
 }
 
 .newsletter .box-detail span{
@@ -363,9 +370,10 @@ input[type='submit']{
 
 .newsletter .box-detail input{
     width: 40rem;
-    padding: 1.2rem;
-    border: none;
+    padding: 1rem;
+    border: 1px solid blue;
     background-color: #fff;
+    border-radius: 20px;
 }
 
 
@@ -399,6 +407,187 @@ input[type='submit']{
     text-align: center;
     cursor: pointer;
 }
+
+footer{
+    background-image: url('../image/footer.png');
+    background-position: top center;
+    background-size: cover;
+    padding: 200px 0 0;
+    width: 100%;
+}
+footer .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    justify-content: center;
+}
+
+footer .content .box{
+    margin: 1rem;
+    line-height: 1.7;
+    color: var(--color);
+    font-size: 1.1rem;
+}
+footer .content .box h3{
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+    color: #31d7a9;
+
+}
+
+footer .content .box a{
+    font-size: 16px;
+    display: block;
+    color: var(--color);
+    text-transform: capitalize;
+}
+footer .content .box a:hover{
+    color: var(--green);
+}
+
+footer .content .box i{
+    margin-right: .5rem;
+}
+
+footer .content .box .icons i{
+     background: var(--background-image);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    transition: .5s;
+    cursor: pointer;
+    margin: .1rem;
+}
+
+footer .bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #fff;
+    color:var(--color)
+}
+
+footer .bottom a{
+    text-transform: capitalize;
+    color: var(--color);
+    font-weight: bold;
+}
+
+.home-section{
+    position: relative;
+    margin-bottom: 2rem;
+    width: 100vw;
+}
+.home-section .overlay{
+    opacity: .4;
+}
+
+.slider{
+    font-family: "Roboto", sans-serif;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.slider__slider{
+    height: 100vh;
+    min-width: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    background-size: cover;
+    position: relative;
+}
+
+.slider__slider .slider-detail{
+    position: absolute;
+    top: 36%;
+    left: 6%;
+    text-align: center!important;
+}
+
+.slider__slider .slider-detail .detail{
+    display: flex;
+    text-transform: capitalize;
+}
+
+
+.slider__slider .slider-detail h1{
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1.2;
+}
+.slider__slider .slider-detail span{
+    color: var(--green);
+}
+
+.slider__slider .slider-detail .detail p{
+    font-size: 16px;
+    color: #fff;
+    margin: 1rem 0;
+}
+.slide1{
+    background-image: url('../image/slider0.jpg');
+}
+.slide2{
+    background-image: url('../image/slider1.webp');
+}
+.slide3{
+    background-image: url('../image/slider0.jpg');
+}
+.slide4{
+    background-image: url('../image/slider0.webp');
+}
+.slide5{
+    background-image: url('../image/slider3.webp');
+}
+.left-arrow,
+.right-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 0 6px rgb(255 255 255 / 40%);
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color:#fff9;
+}
+
+.right-arrow{
+    right: 1rem;
+}
+.left-arrow{
+    left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width:991px){

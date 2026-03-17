@@ -17,3 +17,47 @@ document.querySelector('#search_btn').onclick = () =>{
 const profile = document.querySelector('.profile');
     profile.classList.remove('active');
 }
+
+
+//home section
+
+
+"use strict"
+
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const slider = document.querySelector('.slider');
+
+function scrollRight(){
+    slider.scrollBy({
+        left: window.innerWidth,
+        behavior: "smooth"
+    });
+}
+
+function scrollLeft(){
+    slider.scrollBy({
+        left: -window.innerWidth,
+        behavior: "smooth"
+    });
+}
+
+rightArrow.addEventListener("click", () => {
+    scrollRight();
+});
+
+leftArrow.addEventListener("click", () => {
+    scrollLeft();
+});
+
+let timerId = setInterval(scrollRight, 7000);
+
+function resetTimer(){
+    clearInterval(timerId);
+    timerId = setInterval(scrollRight, 7000);
+}
+
+
+
+
+

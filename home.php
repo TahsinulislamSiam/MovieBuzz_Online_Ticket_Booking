@@ -20,6 +20,109 @@
 <body>
     <?php include 'components/user_header.php'; ?>
 
+    <div class="home-section">
+        <div class="slider">
+            <div class="slider__slider slide1">
+                <div class="overlay"></div>
+                <div class="slider-detail">
+                    <h1>book your tickets <br>for <span>thor love and thunder</span></h1>
+                    <div class="detail">
+                        <p>duration : 2h : 20min</p>
+                        <p>release year : 20 april 2026</p>
+                    </div>
+                    <div class="detail">
+                        <p>language : Hindi | English | Bangla | Tamil</p>
+                        <p>Adventure | Action | Comedy | Sci-fi</p>
+                    </div>
+                    <a href="fetch_movie.php" class="btn">Book ticket now</a>
+                </div>
+            </div>
+
+                        <div class="slider__slider slide2">
+                <div class="overlay"></div>
+                <div class="slider-detail">
+                    <h1>book your tickets <br>for <span>thor love and thunder</span></h1>
+                    <div class="detail">
+                        <p>duration : 2h : 20min</p>
+                        <p>release year : 20 april 2026</p>
+                    </div>
+                    <div class="detail">
+                        <p>language : Hindi | English | Bangla | Tamil</p>
+                        <p>Adventure | Action | Comedy | Sci-fi</p>
+                    </div>
+                    <a href="fetch_movie.php" class="btn">Book ticket now</a>
+                </div>
+            </div>
+
+
+                        <div class="slider__slider slide3">
+                <div class="overlay"></div>
+                <div class="slider-detail">
+                    <h1>book your tickets <br>for <span>thor love and thunder</span></h1>
+                    <div class="detail">
+                        <p>duration : 2h : 20min</p>
+                        <p>release year : 20 april 2026</p>
+                    </div>
+                    <div class="detail">
+                        <p>language : Hindi | English | Bangla | Tamil</p>
+                        <p>Adventure | Action | Comedy | Sci-fi</p>
+                    </div>
+                    <a href="fetch_movie.php" class="btn">Book ticket now</a>
+                </div>
+            </div>
+
+
+                        <div class="slider__slider slide4">
+                <div class="overlay"></div>
+                <div class="slider-detail">
+                    <h1>book your tickets <br>for <span>thor love and thunder</span></h1>
+                    <div class="detail">
+                        <p>duration : 2h : 20min</p>
+                        <p>release year : 20 april 2026</p>
+                    </div>
+                    <div class="detail">
+                        <p>language : Hindi | English | Bangla | Tamil</p>
+                        <p>Adventure | Action | Comedy | Sci-fi</p>
+                    </div>
+                    <a href="fetch_movie.php" class="btn">Book ticket now</a>
+                </div>
+            </div>
+
+
+                        <div class="slider__slider slide5">
+                <div class="overlay"></div>
+                <div class="slider-detail">
+                    <h1>book your tickets <br>for <span>thor love and thunder</span></h1>
+                    <div class="detail">
+                        <p>duration : 2h : 20min</p>
+                        <p>release year : 20 april 2026</p>
+                    </div>
+                    <div class="detail">
+                        <p>language : Hindi | English | Bangla | Tamil</p>
+                        <p>Adventure | Action | Comedy | Sci-fi</p>
+                    </div>
+                    <a href="fetch_movie.php" class="btn">Book ticket now</a>
+                </div>
+            </div>
+            <div class="left-arrow"><i class="bx bxs-left-arrow"></i></div>
+            <div class="right-arrow"><i class="bx bxs-right-arrow"></i></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <?php include 'components/user_footer.php'; ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
