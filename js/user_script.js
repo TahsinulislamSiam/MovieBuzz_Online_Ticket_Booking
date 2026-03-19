@@ -58,6 +58,27 @@ function resetTimer(){
 }
 
 
+let count = document.querySelectorAll('.count');
+let arr = Array.from(count);
+
+arr.map(function(item){
+    let startNumber = 0;
+
+    function counterUp(){
+        startNumber++
+        item.innerHTML = startNumber
+
+        if(startNumber == item.dataset.number){
+            clearInterval(stop)
+        }
+    }
+
+    let stop = setInterval(function(){
+        counterUp();
+    },50)
+})
+
+
 
 
 
