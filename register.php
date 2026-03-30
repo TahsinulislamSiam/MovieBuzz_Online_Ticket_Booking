@@ -16,11 +16,58 @@
         $email = $_POST['email'];
         $email = filter_var($email, FILTER_SANITIZE_STRING);
 
+        $number = $_POST['number'];
+        $number = filter_var($number, FILTER_SANITIZE_STRING);
+
         $pass = sha1($_POST['pass']);
         $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
         $cpass = sha1($_POST['cpass']);
         $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+        $image = $_FILES['image']['name'];
+        $image = filter_var($image, FILTER_SANITIZE_STRING);
+        $ext = pathinfo($image, PATHINFO_EXTENSION);
+        $rename = unique_id() .'.'. $ext;
+        $image_size = $_FILES['image']['size'];
+        $image_tmp_name = $_FILES['image']['tmp_name'];
+        $image_folder = 'uploaded_files/' .$rename;
+
+
+        $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+        $select_user->execute([$email]);
+
+        if($select_user->rowCount() > 0) {
+            $warning_msg[] = 'email already exist';
+        } else{
+            if($pass != $cpass){
+                    $warning_msg[] = 'password not matched';
+            } else{
+                $insert_user = $conn->prepare("INSERT INTO `users`(id, name, number, email, password, image) VALUES(?,?,?,?,?,?)");
+                $insert_user->execute([$id, $name, $number, $email, $cpass, $rename]);
+
+
+
+                move_uploaded_file($image_tmp_name, $image_folder);
+
+
+                if($insert_user){
+                    $verify_user = $conn->prepare("SELECT * FROM `users` WHERE email =  ? AND password = ? LIMIT 1");
+                    $verify_user->execute([$email,$pass]);
+                    $row = $verify_user->fetch(PDO::FETCH_ASSOC);
+
+
+                    if($verify_user->rowCount() > 0) {
+                        setcookie('user_id', $row['id'], time() + 60*60*24*30,'/');
+                        header('location:home.php');
+                } else{
+                    $warning_msg[] = 'something went wrong';
+                }
+            }
+        }
+            
+        }
+
     }
 ?>
 

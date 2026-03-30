@@ -6,6 +6,8 @@
     } else{
         $user_id = '';
     }
+
+    include 'components/add_wishlist.php';
 ?>
 
 <!DOCTYPE html>
@@ -329,7 +331,7 @@
 
     <?php include 'components/user_footer.php'; ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
     <?php 
         include'js/user_script.js';

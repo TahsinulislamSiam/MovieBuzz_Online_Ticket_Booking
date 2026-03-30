@@ -6,6 +6,8 @@
     } else{
         $user_id = '';
     }
+
+    include 'components/add_wishlist.php';
 ?>
 
 <!DOCTYPE html>
