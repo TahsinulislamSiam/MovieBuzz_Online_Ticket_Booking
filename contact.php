@@ -32,6 +32,70 @@
         </div>
     </div>
 
+    <div class="service">
+        <div class="heading">
+            <h1>Our service</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id atque culpa esse, incidunt consequuntur quos debitis accusantium. Eius architecto quas laboriosam explicabo ad? Ipsam, incidunt! Maxime consequuntur nobis voluptate corrupti?</p>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/s-icon (2).png" alt="">
+                <div>
+                    <h1>easy canceling</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/s-icon (3).png" alt="">
+                <div>
+                    <h1>money back guarantee</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/s-icon (1).png" alt="">
+                <div>
+                    <h1>online support 24/7</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="heading">
+            <h1>get in touch</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id atque culpa esse, incidunt consequuntur quos debitis accusantium. Eius architecto quas laboriosam explicabo ad? Ipsam, incidunt! Maxime consequuntur nobis voluptate corrupti?</p>
+        </div>
+        <div class="box-container">
+            <div class="form-container">
+                <form action="" method="post" enctype="multipart/form-data" class="register">
+                    <div class="input-field">
+                        <p>your name <span>*</span></p>
+                        <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+                    </div>
+                        <div class="input-field">
+                        <p>your email address <span>*</span></p>
+                        <input type="email" name="email" required maxlength="100" placeholder="enter your email" class="box">
+                    </div>
+                    <div class="input-field">
+                        <p>subject <span>*</span></p>
+                        <input type="text" name="subject" required maxlength="50" placeholder="enter your name" class="box">
+                    </div>
+                        <div class="input-field">
+                        <p>your message <span>*</span></p>
+                        <textarea name="message" id="" class="box"></textarea>
+                    </div>
+                    <button type="submit" name="send_message" class="btn">send message</button>
+                </form>
+            </div>
+            <div class="box">
+                <img src="image/contact.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
 
    
 

@@ -1045,13 +1045,17 @@ input::placeholder{
     font-size: 1.2rem;
     color: var(--color);
     text-transform: capitalize;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .form-container form .link{
     padding-top: 1rem;
     font-size: 1.2rem;
     text-transform: capitalize;
+}
+
+.form-container form span{
+    color: red;
 }
 .form-container form .link a{
     color: var(--green);
@@ -1104,8 +1108,46 @@ input::placeholder{
 }
 
 
+.service{
+    padding: 4%;
+    min-height: 100vh;
+}
+
+.service .box-container,
+.address .box-container{
+    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.service .box-container .box{
+    background-image: var(--overlay);
+    opacity: .8;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 1rem .5rem;
+}
+
+.service .box-container .box img{
+    width: 120px;
+    padding: 1rem;
+    object-fit: contain;
+}
+
+.service .box-container .box h1{
+    font-size: 24px;
+    color: var(--color);
+    margin: .5rem 0;
+    text-transform: capitalize;
+}
 
 
+.contact{
+    overflow-x: auto;
+}
+
+.contact img{
+    width: 100%;
+}
 
 
 
