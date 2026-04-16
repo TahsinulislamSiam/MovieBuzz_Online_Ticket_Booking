@@ -7,6 +7,39 @@
         $user_id = '';
     }
 
+    if(isset($_POST['send_message'])) {
+        if($user_id !=''){
+            $id = unique_id();
+
+        $name = $_POST['name'];
+        $name = filter_var($name, FILTER_SANITIZE_STRING);
+
+        $email = $_POST['email'];
+        $email = filter_var($email, FILTER_SANITIZE_STRING);
+
+        $subject = $_POST['subject'];
+        $subject = filter_var($subject, FILTER_SANITIZE_STRING);
+
+        $message = $_POST['message'];
+        $message = filter_var($message, FILTER_SANITIZE_STRING);
+
+
+        $verify_message = $conn->prepare("SELECT * FROM `message` WHERE user_id = ? AND name = ? AND email = ? AND subject = ? AND message = ?");
+        $verify_message->execute([$user_id,$name,$email,$subject,$message]);
+
+
+        if($verify_message->rowCount() > 0){
+            $warning_msg[] = 'message already send';
+        } else{
+            $insert_message = $conn->prepare("INSERT INTO `message`(id, user_id, name, email, subject, message) VALUES(?, ?, ?, ?, ?, ?)");
+            $insert_message->execute([$id,$user_id,$name,$email,$subject,$message]);
+            $success_msg[] = 'message send';
+        }
+
+        } else{
+            $warning_msg[] = 'please login first';
+        }
+    }
     
 ?>
 
@@ -80,11 +113,11 @@
                     </div>
                     <div class="input-field">
                         <p>subject <span>*</span></p>
-                        <input type="text" name="subject" required maxlength="50" placeholder="enter your name" class="box">
+                        <input type="text" name="subject" required maxlength="50" placeholder="enter your subject" class="box">
                     </div>
                         <div class="input-field">
                         <p>your message <span>*</span></p>
-                        <textarea name="message" id="" class="box"></textarea>
+                        <textarea name="message" id="" class="box" placeholder="write here"></textarea>
                     </div>
                     <button type="submit" name="send_message" class="btn">send message</button>
                 </form>

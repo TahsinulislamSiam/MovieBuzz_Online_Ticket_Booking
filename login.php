@@ -51,7 +51,7 @@
         <div class="detail">
             <h1>Login Now</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga pariatur deserunt vero in <br>inventore quibusdam repellat aperiam, omnis exercitationem tempora iure autem quidem nihil odio, minus molestias voluptas itaque porro?</p>
-            <span><a href="home.php">home</a><i class="bx bxs-right-arrow-alt"></i>Register Now</span>
+            <span><a href="home.php">home</a><i class="bx bxs-right-arrow-alt"></i>login Now</span>
         </div>
     </div>
 

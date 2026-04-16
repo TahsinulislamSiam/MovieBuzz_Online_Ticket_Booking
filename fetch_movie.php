@@ -8,6 +8,7 @@
     }
 
     include 'components/add_wishlist.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +65,7 @@
             <p><img src="image/cake.png" alt="">98%</p>
         </div>
         <input type="hidden" name="movie_id" value="<?=$fetch_movies['id'] ?>">
-         <a href="select-language?movie_id=<?= $fetch_movies['id'] ?>" class="btn">Book ticket</a>
+         <a href="select-language.php?movie_id=<?= $fetch_movies['id'] ?>" class="btn">Book ticket</a>
             </div>
         </form>
 
