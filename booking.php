@@ -75,6 +75,36 @@ if ($select_seat->rowCount() > 0) {
     }
 }
 
+if(isset($_POST['booking'])) {
+    if($user_id!='') {
+        $id = unique_id();
+
+        $payment_method = $_POST['payment_method'];
+        $payment_method = filter_var($payment_method,FILTER_SANITIZE_STRING);
+
+        $card_details = $_POST['card_details'];
+        $card_details= filter_var($card_details,FILTER_SANITIZE_STRING);
+
+         $card_name = $_POST['card_name'];
+        $card_name= filter_var($card_name,FILTER_SANITIZE_STRING);
+
+        $expiration = $_POST['expiration'];
+        $expiration = filter_var($expiration,FILTER_SANITIZE_STRING);
+
+        $cvv = $_POST['cvv'];
+        $cvv = filter_var($cvv,FILTER_SANITIZE_STRING);
+
+        $insert_booking = $conn->prepare("INSERT INTO `booking`(id, user_id, show_id, movie_id, language, formate, date, time, seat_detail_id, total_seat, seat_details, amount, payment_method, nameon_card, card_details, expiration, cvv) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+
+        $insert_booking->execute([$id, $user_id, $show_id, $movie_id, $language, $formate, $date, $time, $seat_detail_id, $total_seats, $seat_detail, $total_price, $payment_method, $card_name, $card_details, $expiration, $cvv]);
+
+         header('location:my_booking.php');
+
+    } else{
+        $warning_msg[]='please login first';
+    }
+}
+
 
 
 ?>
@@ -140,17 +170,17 @@ if ($select_seat->rowCount() > 0) {
                 </div>
                 <div class="input-field">
                     <p>card details <span>*</span></p>
-                    <input type="number" name="card-details" class="box" required>
+                    <input type="number" name="card_details" class="box" required>
                 </div>
             </div>
             <div class="col">
                 <div class="input-field">
                     <p>name on card <span>*</span></p>
-                    <input type="text" name="card-name" class="box" required>        
+                    <input type="text" name="card_name" class="box" required>        
                 </div>
                 <div class="input-field">
                     <p>expiration <span>*</span></p>
-                    <input type="date" name="expiratory" min="<?php echo date('Y-m-d') ?>" class="box">        
+                    <input type="date" name="expiration" min="<?php echo date('Y-m-d') ?>" class="box">        
                 </div>
             </div>
         </div>
