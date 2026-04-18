@@ -41,7 +41,7 @@
                 <h3 style="margin-bottom: 1rem;"><?=$fetch_profile['name']; ?></h3>
                 <div class="flex-btn">
                     <a href="profile.php" class="btn">View Profile</a>
-                    <a href="component.user_logout.php" onclick="return confirm('logout from this website');" class="btn">logout</a>
+                    <a href="components/user_logout.php" onclick="return confirm('logout from this website');" class="btn">logout</a>
                 </div>
                 <?php } else{ ?>
                  <img src="image/user.png">
