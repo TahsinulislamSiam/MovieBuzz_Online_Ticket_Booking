@@ -126,7 +126,7 @@ if($select_booking->rowCount() > 0){
 <form action="" method="post" class="flex-btn">
        <button type="submit" name="canceled" class="btn" onclick="return confirm('do you want to cancelled booking');">cancel</button>
         <a href="my_booking.php?post_id=<?= $fetch_booking['id'] ?>" class="btn">go back</a>
-        <a href="rating.php?get_id=<?= $fetch_movie['id'] ?>" class="btn">give ratings</a>
+        <a href="rating.php?get_id=<?= $fetch_booking['id'] ?>" class="btn">give ratings</a>
 </form>
 <?php } ?>
 </div>
